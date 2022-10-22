@@ -55,9 +55,9 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    background:url(/images/yourbackground.jpg);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-attachment:fixed; //不重复</span><br><span class="line">    background-size: cover;      //填充</span><br><span class="line">    background-position:50% 50%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="11-将中文链接改为绝对值的英文链接"><a href="#11-将中文链接改为绝对值的英文链接" class="headerlink" title="11.将中文链接改为绝对值的英文链接"></a>11.将中文链接改为绝对值的英文链接</h3><p>当我们在写文章的时候，Markdowm文件使用中文命名时，生成的网页文件也是中文，链接地址也会包含中文。这是因为hexo文章链接默认的生成规则是：<code>:year/:month/:day/:title/</code>,我们想要把链接改为绝对值的英文链接，可以借助<code>hexo-abbrlink</code>插件。</p>
-<h4 id="11-1-安装插件"><a href="#11-1-安装插件" class="headerlink" title="11.1 安装插件"></a>11.1 安装插件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+<h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
 
-<h4 id="11-2-配置插件"><a href="#11-2-配置插件" class="headerlink" title="11.2 配置插件"></a>11.2 配置插件</h4><p>打开博客根目录下的<code>_config.yml</code>文件（非next主题的<code>_config.yml</code>文件），找到以下代码：</p>
+<h4 id="配置插件"><a href="#配置插件" class="headerlink" title="配置插件"></a>配置插件</h4><p>打开博客根目录下的<code>_config.yml</code>文件（非next主题的<code>_config.yml</code>文件），找到以下代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
 
 <p>修改为：</p>
@@ -66,10 +66,10 @@
 <p><code>abbrlink</code>参数主要有两个，<code>alg</code>和<code>rep</code>，具体参数设置如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br></pre></td></tr></table></figure>
 
-<h3 id="12-增加文章字数及阅读时间"><a href="#12-增加文章字数及阅读时间" class="headerlink" title="12.增加文章字数及阅读时间"></a>12.增加文章字数及阅读时间</h3><h4 id="12-1-安装hexo-word-counter"><a href="#12-1-安装hexo-word-counter" class="headerlink" title="12.1 安装hexo-word-counter"></a>12.1 安装hexo-word-counter</h4><p><code>hexo-word-counter</code> <a href="https://github.com/next-theme/hexo-word-counter">GitHub</a></p>
+<h3 id="12-增加文章字数及阅读时间"><a href="#12-增加文章字数及阅读时间" class="headerlink" title="12.增加文章字数及阅读时间"></a>12.增加文章字数及阅读时间</h3><h4 id="安装hexo-word-counter"><a href="#安装hexo-word-counter" class="headerlink" title="安装hexo-word-counter"></a>安装hexo-word-counter</h4><p><code>hexo-word-counter</code> <a href="https://github.com/next-theme/hexo-word-counter">GitHub</a></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-word-counter</span><br></pre></td></tr></table></figure>
 
-<h4 id="12-2-文件修改"><a href="#12-2-文件修改" class="headerlink" title="12.2 文件修改"></a>12.2 文件修改</h4><p>打开博客根目录下的<code>_config.yml</code>文件（非next主题的<code>_config.yml</code>文件），在代码最下方添加以下代码：</p>
+<h4 id="文件修改"><a href="#文件修改" class="headerlink" title="文件修改"></a>文件修改</h4><p>打开博客根目录下的<code>_config.yml</code>文件（非next主题的<code>_config.yml</code>文件），在代码最下方添加以下代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置博客单词统计</span><br><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true    # 文章文字统计</span><br><span class="line">  time: true       # 文章阅读时间统计</span><br><span class="line">  total_symbols: false   # 站点总总数统计</span><br><span class="line">  total_time: false   # 站点阅读时间统计</span><br><span class="line">  exclude_codeblock: false</span><br><span class="line">  awl: 2</span><br><span class="line">  wpm: 200   #每分钟阅读字数</span><br><span class="line">  suffix: &quot;mins.&quot;</span><br></pre></td></tr></table></figure>
 
 <p>在next主题文件夹下找到以下文件<code>/themes/next/_config.yml</code>，打开文件，找到以下代码修改即可：</p>
@@ -88,10 +88,11 @@
 <p><code>border-style:</code>：边框样式。<br><code>border-width</code>：边框宽度。<br><code>border-color</code>：边框颜色。</p>
 ]]></content>
       <categories>
-        <category>-Hexo</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>-Hexo -NexT</tag>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
       </tags>
   </entry>
   <entry>
@@ -113,6 +114,53 @@
       </categories>
       <tags>
         <tag>网址</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息系统项目管理师（综合知识）</title>
+    <url>/posts/da3a.html</url>
+    <content><![CDATA[<p><strong>一、项目管理一般知识</strong></p>
+<p><strong>1、项目：</strong>为提供一项独特产品、服务或成果所做的临时性努力。</p>
+<p>2、项目目标SMART（具体、可测量、可达到、相关性、有明确时限）（产品、服务、成果，有时它们是不可见的）</p>
+<p><strong>3、项目特点：</strong>临时性、独特性、渐进明细（资源约束与目的性）。</p>
+<p>4、典型的信息系统项目的特点：目标不明确、需求变化频繁、生命期通常较短、采用大量新技术……</p>
+<p><strong>5、工作：</strong>指日常运营（Operations）或者项目。区别：日常运营是持续不断和重复进行；项目是临时性、独特的。</p>
+<p><strong>6、项目管理</strong>（project management），在项目活动中把知识、技能、手段、技术应用于项目活动，以达到项目的要求。</p>
+<p><strong>7、项目管理特点：</strong>复杂系、创造性、集权领导＆专门组织、项目经理重要、受社会环境、政治、文化、自然环境影响。</p>
+<p><strong>8、项目组织结构类型（能够加以区分、会看图）：</strong>职能型、矩阵型（弱矩阵、平衡矩阵、强矩阵）、项目型。</p>
+<p>独特的管理项目的技术有：工作分解结构WBS、关键路径分析、挣值EV管理。</p>
+<p><strong>9、项目生命周期：</strong></p>
+<p>项目生命周期（可研、设计、施工、移交）、项目管理生命周期（启动、计划、执行、监控、收尾）、产品生命周期（研发（研发包含项目生命周期和项目管理生命周期）、运营）。</p>
+<p><strong>10、五大过程组九大项目管理知识领域47个过程组（十五矩阵图表）</strong></p>
+<p><img src="001.png" alt="项目管理过程组"></p>
+<p><strong>11、信息系统项目典型生命周期模型：</strong></p>
+<p>1）瀑布：可行性分析-需求分析-软件设计（概要￥详细）-编码（单元测试）-测试-运维（适合较小费用开发）。</p>
+<p>2）螺旋（迭代与瀑布结合）：一系列的增量发布（强调风险分析，适合庞大复杂高风险的系统）。</p>
+<p>3）迭代：每个阶段包含不同比例的所有活动。分初始、细化、构造、移交4阶段。</p>
+<p>4）V：左开发右测试，明确测试过程不同级别。（需求明确，变更少）。</p>
+<p>5）原型化：快速原型。分抛弃型和进化型。（反复修改，初始需求不明确）。</p>
+<p>6）敏捷开发：以人为核心、迭代、循序渐进。（scrum：迭代式增量软件开发过程，流程包括构想、推测、探索、适应、结束）。</p>
+<p><strong>战略管理</strong></p>
+<p>1、项目选择时，首先考虑的是项目的目标是否符合组织的战略需要。</p>
+<p><strong>2、战略类型：</strong></p>
+<p>1）防御者（保持稳定的或扩大市场份额）。</p>
+<p>2）探索者（注重创新，敢于尝试机会，风险较大，组织扁平化管理）。</p>
+<p>3）分析者（平衡；在上两者之间平衡组织策略）。</p>
+<p>4）反应者（既缺乏适应外部竞争的能力，又缺乏有效的内部控制机能）。</p>
+<p><strong>3、战略组织类型：</strong></p>
+<p>1）指挥型（组织高层，尤其是组织“一把手”要有较高的权威）。</p>
+<p>2）变革型（组织是以如何实施组织战略这一主题展开的，利用新的组织机构和参谋人员向全体成员传递新战略）。</p>
+<p>3）合作型（要求最高层与其他高层管理人员分担战略责任，以发挥集体的智慧）。</p>
+<p>4）文化型（组织高层从如何动员全体成员参与战略实施活动的角度来考虑战略的制定和执行）。</p>
+<p>5）增长型（组织高层从如何激励一般管理人员制定实施战略的积极性及主动性来制定战略和实施战略）。</p>
+<p><strong>4、战略三层次：</strong>目标层战略、方针层战略、行为层战略。</p>
+]]></content>
+      <categories>
+        <category>软考</category>
+      </categories>
+      <tags>
+        <tag>软考</tag>
+        <tag>高项</tag>
       </tags>
   </entry>
 </search>

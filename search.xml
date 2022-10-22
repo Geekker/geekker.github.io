@@ -1,14 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>网址记录</title>
-    <url>/posts/10000.html</url>
+    <title>NexT主题美化</title>
+    <url>/posts/330f.html</url>
+    <content><![CDATA[<p>简介：本文章介绍Hexo-NexT主题美化设置，如字体大小、主题颜色、图标优化等……</p>
+<h3 id="1-分类与标签设置"><a href="#1-分类与标签设置" class="headerlink" title="1.分类与标签设置"></a>1.分类与标签设置</h3><p>在Hexo里内置有分类页面与标签页面，但在使用中文标签时候，有时候会导致网页地址乱码，无法浏览，故需要使用分类地图与标签地图以便中英对应，避免网页地址乱码。<br>在博客的根目录内找到Hexo的配置文件 <code>_config.yml</code>，打开后找到以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Category &amp; Tag</span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">#在这里添加分类，格式为中文分类: 对应英文，如：</span><br><span class="line">  数据分析: analysis</span><br><span class="line">tag_map:</span><br><span class="line">#在这里添加分类，格式为中文分类: 对应英文，如：</span><br><span class="line">  其他: other</span><br></pre></td></tr></table></figure>
+
+<p>假如文章的设置为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: NexT主题美化</span><br><span class="line">tags: [其他]</span><br><span class="line">categories: [数据分析]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>设置分类与标签地图前：<br>分类页内<code>[数据分析]</code>标签的网址为：<code>http://localhost:4000/categories/数据分析/</code><br>标签页内<code>[其他]</code> 标签的网址为：<code>http://localhost:4000/tags/其他/</code></p>
+<p>设置分类与标签地图后：<br>分类页内<code>[数据分析]</code>标签的网址为： <code>http://localhost:4000/categories/analysis/</code><br>标签页内<code>[其他]</code>标签的网址为：<code>http://localhost:4000/tags/other/</code></p>
+<h3 id="2-修改博客字体大小（总体）"><a href="#2-修改博客字体大小（总体）" class="headerlink" title="2.修改博客字体大小（总体）"></a>2.修改博客字体大小（总体）</h3><p>在next主题文件夹下找到以下文件<code>/themes/next/source/css/_variables/base.styl</code>，打开文件，找到以下代码，修改即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// Font size</span><br><span class="line">$font-size-base           = (hexo-config(&#x27;font.enable&#x27;) and hexo-config(&#x27;font.global.size&#x27;) is a &#x27;unit&#x27;) ? unit(hexo-config(&#x27;font.global.size&#x27;), em) : 1em;</span><br><span class="line">$font-size-smallest       = .75em;  //文章下发表时间等字段</span><br><span class="line">$font-size-smaller        = .8125em;  //博客侧边栏字体（标题与网页分类）</span><br><span class="line">$font-size-small          = .875em;  //代码格式文字字体</span><br><span class="line">$font-size-medium         = 1em;  //博客侧边栏字体（头像下字体）</span><br><span class="line">$font-size-large          = 1.125em;  //文章总字体大小（包含所有标题及内容）</span><br><span class="line">$font-size-larger         = 1.25em;</span><br><span class="line">$font-size-largest        = 1.5em;  //文章标题</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-修改博客字体大小（细分项目）"><a href="#3-修改博客字体大小（细分项目）" class="headerlink" title="3.修改博客字体大小（细分项目）"></a>3.修改博客字体大小（细分项目）</h3><p>在next主题文件夹下找到以下文件<code>/themes/next/source/css/_variables/base.styl</code>，打开文件：<br><strong>博客标题字体大小</strong><br>找到以下代码，修改最后数值即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$font-size-title                = (hexo-config(&#x27;font.enable&#x27;) and hexo-config(&#x27;font.title.size&#x27;) is a &#x27;unit&#x27;) ? unit(hexo-config(&#x27;font.title.size&#x27;), em) : 1.5em;</span><br></pre></td></tr></table></figure>
+
+<p><strong>博客副标题字体大小</strong><br>找到以下代码，修改最后数值即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$font-size-subtitle             = $font-size-smaller;  //修改前</span><br><span class="line">$font-size-subtitle             = 0.9em;               //修改后</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-修改主题颜色"><a href="#4-修改主题颜色" class="headerlink" title="4.修改主题颜色"></a>4.修改主题颜色</h3><p><strong>头部、侧边栏颜色</strong><br>在next主题文件夹下找到以下文件<code>/themes/next/_config.yml</code>，打开文件，找到以下代码修改即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Browser header panel color.</span><br><span class="line">theme_color:</span><br><span class="line">  light: &quot;#222&quot;  #日间模式</span><br><span class="line">  dark: &quot;#222&quot;  #夜间模式</span><br></pre></td></tr></table></figure>
+
+<p>提示</p>
+<p>颜色为十六进制，可使用支持十六进制软件进行颜色挑选。</p>
+<p><strong>修改侧边栏标签颜色</strong><br>在next主题文件夹下找到以下文件<code>/themes/next/source/css/_variables/base.styl</code>，打开文件，找到以下代码修改即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$menu-item-bg-color           = $whitesmoke;  //日间模式标签选择后颜色</span><br><span class="line">$menu-item-bg-color-dark      = $black-light;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-修改标签前面的符号"><a href="#5-修改标签前面的符号" class="headerlink" title="5.修改标签前面的符号"></a>5.修改标签前面的符号</h3><p>在next主题文件夹下找到以下文件<code>/themes/next/layout/_macro/post.njk</code>，打开文件，找到以下代码将修改即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;%- if post.tags and post.tags.length %&#125;</span><br><span class="line">  &#123;%- set tag_indicate = &#x27;&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;&#x27; if theme.tag_icon else &#x27;#&#x27; %&#125;  /*修改此行代码，将#修改为你所需的图标*/</span><br><span class="line">  &lt;div class=&quot;post-tags&quot;&gt;</span><br><span class="line">    &#123;%- for tag in post.tags.toArray() %&#125;</span><br><span class="line">      &lt;a href=&quot;&#123;&#123; url_for(tag.path) &#125;&#125;&quot; rel=&quot;tag&quot;&gt;&#123;&#123; tag_indicate &#125;&#125; &#123;&#123; tag.name &#125;&#125;&lt;/a&gt;</span><br><span class="line">    &#123;%- endfor %&#125;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如修改为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;%- set tag_indicate = &#x27;&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;&#x27; if theme.tag_icon else &#x27;fa fa-tag&#x27; %&#125;  /*修改此行代码，将#修改为你所需的图标*/</span><br></pre></td></tr></table></figure>
+
+<p>提示</p>
+<p>图标样式可自行在网上查找<code> Font Awesome</code>。</p>
+<h3 id="6-修改网站建站时间"><a href="#6-修改网站建站时间" class="headerlink" title="6.修改网站建站时间"></a>6.修改网站建站时间</h3><p>修改网站建站时间，主要影响博客最下方的显示：</p>
+<p><a href="https://www.dobeblog.cn/posts/71afd747/web-settime.png"><img src="https://www.dobeblog.cn/posts/71afd747/web-settime.png" alt="建站时间">建站时间</a></p>
+<p>打开next主题文件夹，找到以下文件<code>/themes/next/_config.yml</code>，打开文件，找到以下代码，修改即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">footer:</span><br><span class="line">  # Specify the year when the site was setup. If not defined, current year will be used.</span><br><span class="line">  since: 2000</span><br><span class="line">  #修改以上数值即可</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-增加阅读进度条"><a href="#7-增加阅读进度条" class="headerlink" title="7.增加阅读进度条"></a>7.增加阅读进度条</h3><p>在next主题文件夹下找到以下文件<code>/themes/next/_config.yml</code>，打开文件，找到以下代码修改即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">back2top:</span><br><span class="line">  enable: true                 #是否开启回到顶部按钮</span><br><span class="line">  # Back to top in sidebar.</span><br><span class="line">  sidebar: false               #将回到顶部按钮放到侧边栏最下方（false则默认放在右下角）</span><br><span class="line">  # Scroll percent label in b2t button.</span><br><span class="line">  scrollpercent: false         #是否显示阅读进度百分比</span><br><span class="line"></span><br><span class="line"># 页面顶部阅读进度条</span><br><span class="line"># Reading progress bar</span><br><span class="line">reading_progress:</span><br><span class="line">  enable: false               #是否开启页面顶部阅读进度条</span><br><span class="line">  # Available values: left | right</span><br><span class="line">  start_at: left</span><br><span class="line">  # Available values: top | bottom</span><br><span class="line">  position: top</span><br><span class="line">  reversed: false            #false则显示已阅读进度，true则显示剩余阅读进度</span><br><span class="line">  color: &quot;#37c6c0&quot;          #进度条颜色</span><br><span class="line">  height: 3px              #进度条宽度</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-开启代码框复制按钮"><a href="#8-开启代码框复制按钮" class="headerlink" title="8.开启代码框复制按钮"></a>8.开启代码框复制按钮</h3><p>在next主题文件夹下找到以下文件<code>/themes/next/_config.yml</code>，打开文件，找到以下代码修改即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Add copy button on codeblock</span><br><span class="line">copy_button:</span><br><span class="line">  #是否开启复制按钮</span><br><span class="line">  enable: false</span><br><span class="line">  # Available values: default | flat | mac</span><br><span class="line">  # 代码框风格</span><br><span class="line">  style:</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-开启图片单击放大功能"><a href="#9-开启图片单击放大功能" class="headerlink" title="9.开启图片单击放大功能"></a>9.开启图片单击放大功能</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.</span><br><span class="line"># For more information: https://fancyapps.com/fancybox/</span><br><span class="line">fancybox: false</span><br><span class="line"></span><br><span class="line"># A JavaScript library for zooming images like Medium.</span><br><span class="line"># Warning: Do not enable both `fancybox` and `mediumzoom`.</span><br><span class="line"># For more information: https://medium-zoom.francoischalifour.com</span><br><span class="line">mediumzoom: false</span><br></pre></td></tr></table></figure>
+
+<p>以上两个图片单击放大功能，选择其中一个并修改数值为true即可。</p>
+<h3 id="10-添加背景图片"><a href="#10-添加背景图片" class="headerlink" title="10.添加背景图片"></a>10.添加背景图片</h3><p>在next主题文件夹下找到以下文件<code>/themes/next/source/css/_schemes/Gemini/index.styl</code>，打开文件，在最下面添加一下代码即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    background:url(/images/yourbackground.jpg);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-attachment:fixed; //不重复</span><br><span class="line">    background-size: cover;      //填充</span><br><span class="line">    background-position:50% 50%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-将中文链接改为绝对值的英文链接"><a href="#11-将中文链接改为绝对值的英文链接" class="headerlink" title="11.将中文链接改为绝对值的英文链接"></a>11.将中文链接改为绝对值的英文链接</h3><p>当我们在写文章的时候，Markdowm文件使用中文命名时，生成的网页文件也是中文，链接地址也会包含中文。这是因为hexo文章链接默认的生成规则是：<code>:year/:month/:day/:title/</code>,我们想要把链接改为绝对值的英文链接，可以借助<code>hexo-abbrlink</code>插件。</p>
+<h4 id="11-1-安装插件"><a href="#11-1-安装插件" class="headerlink" title="11.1 安装插件"></a>11.1 安装插件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="11-2-配置插件"><a href="#11-2-配置插件" class="headerlink" title="11.2 配置插件"></a>11.2 配置插件</h4><p>打开博客根目录下的<code>_config.yml</code>文件（非next主题的<code>_config.yml</code>文件），找到以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
+
+<p>修改为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://example.com</span><br><span class="line">permalink: posts/:abbrlink/</span><br><span class="line">#permalink: :year/:month/:day/:title/</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32</span><br><span class="line">  rep: hex</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
+
+<p><code>abbrlink</code>参数主要有两个，<code>alg</code>和<code>rep</code>，具体参数设置如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br></pre></td></tr></table></figure>
+
+<h3 id="12-增加文章字数及阅读时间"><a href="#12-增加文章字数及阅读时间" class="headerlink" title="12.增加文章字数及阅读时间"></a>12.增加文章字数及阅读时间</h3><h4 id="12-1-安装hexo-word-counter"><a href="#12-1-安装hexo-word-counter" class="headerlink" title="12.1 安装hexo-word-counter"></a>12.1 安装hexo-word-counter</h4><p><code>hexo-word-counter</code> <a href="https://github.com/next-theme/hexo-word-counter">GitHub</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-word-counter</span><br></pre></td></tr></table></figure>
+
+<h4 id="12-2-文件修改"><a href="#12-2-文件修改" class="headerlink" title="12.2 文件修改"></a>12.2 文件修改</h4><p>打开博客根目录下的<code>_config.yml</code>文件（非next主题的<code>_config.yml</code>文件），在代码最下方添加以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置博客单词统计</span><br><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true    # 文章文字统计</span><br><span class="line">  time: true       # 文章阅读时间统计</span><br><span class="line">  total_symbols: false   # 站点总总数统计</span><br><span class="line">  total_time: false   # 站点阅读时间统计</span><br><span class="line">  exclude_codeblock: false</span><br><span class="line">  awl: 2</span><br><span class="line">  wpm: 200   #每分钟阅读字数</span><br><span class="line">  suffix: &quot;mins.&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在next主题文件夹下找到以下文件<code>/themes/next/_config.yml</code>，打开文件，找到以下代码修改即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/next-theme/hexo-word-counter</span><br><span class="line"># 添加文章字数统计、阅读时常</span><br><span class="line">symbols_count_time:</span><br><span class="line">  # 首页文章统计数量前是否显示文字描述（本文字数、阅读时长）</span><br><span class="line">  separated_meta: true</span><br><span class="line">  # 页面底部统计数量前是否显示文字描述（站点总字数、站点阅读时长）</span><br><span class="line">  item_text_total: false</span><br></pre></td></tr></table></figure>
+
+<h3 id="13-侧边栏文章目录展开"><a href="#13-侧边栏文章目录展开" class="headerlink" title="13.侧边栏文章目录展开"></a>13.侧边栏文章目录展开</h3><p>在next主题文件夹下找到以下文件<code>/themes/next/_config.yml</code>，打开文件，找到以下代码修改即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Table of Contents in the Sidebar</span><br><span class="line"># Front-matter variable (nonsupport wrap expand_all).</span><br><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line">  # Automatically add list number to toc.</span><br><span class="line">  # 文章目录是否自动生成数字排序</span><br><span class="line">  number: true</span><br><span class="line">  # If true, all words will placed on next lines if header width longer then sidebar width.</span><br><span class="line">  # 文章目录是否自动换行</span><br><span class="line">  wrap: false</span><br><span class="line">  # If true, all level of TOC in a post will be displayed, rather than the activated part of it.</span><br><span class="line">  # 文章目录是否全部展开</span><br><span class="line">  expand_all: false</span><br><span class="line">  # Maximum heading depth of generated toc.</span><br><span class="line">  max_depth: 6</span><br></pre></td></tr></table></figure>
+
+<p>将上述<code>expand_all</code>改为<code>true</code>即可。</p>
+<h3 id="14-图片增加边框"><a href="#14-图片增加边框" class="headerlink" title="14.图片增加边框"></a>14.图片增加边框</h3><p>在next主题文件夹下找到以下文件<code>themes/next/source/css/_common/components/post/post-body.styl</code>，打开文件，找到以下代码修改即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">iframe, img, video, embed &#123;</span><br><span class="line">  margin-bottom: 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在以上代码增加部分代码，如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">iframe, img, video, embed &#123;</span><br><span class="line">  margin-bottom: 20px;</span><br><span class="line">  border-style: solid;</span><br><span class="line">  border-width: 1.5px;</span><br><span class="line">  border-color: #aaaaaa;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>border-style:</code>：边框样式。<br><code>border-width</code>：边框宽度。<br><code>border-color</code>：边框颜色。</p>
+]]></content>
+      <categories>
+        <category>-Hexo</category>
+      </categories>
+      <tags>
+        <tag>-Hexo -NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用网址</title>
+    <url>/posts/fb95.html</url>
     <content><![CDATA[<p>以下记录了一些个人常用地址位置：</p>
 <p>我的软件地址：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://gofile.me/6Uy5A/gPPrN60yx</span><br></pre></td></tr></table></figure>
 
 <p>我的镜像地址：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;http://gofile.me/6Uy5A/gvtcZ2fhu&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://gofile.me/6Uy5A/gvtcZ2fhu</span><br></pre></td></tr></table></figure>
 
 <p>我的Office地址：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://gofile.me/6Uy5A/MaRy5u0jV</span><br></pre></td></tr></table></figure>
@@ -20,23 +114,5 @@
       <tags>
         <tag>网址</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/16107.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
 </search>

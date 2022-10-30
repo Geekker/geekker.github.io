@@ -164,4 +164,67 @@
         <tag>网址</tag>
       </tags>
   </entry>
+  <entry>
+    <title>手把手教你白嫖Microsoft Office 365(上)</title>
+    <url>/posts/99aa.html</url>
+    <content><![CDATA[<p>关于Office的版本我在文章《<a href="http://mp.weixin.qq.com/s?__biz=MzA3Nzg3NjYxOQ==&mid=2448154641&idx=1&sn=25955219161d4dc24e586039d87e9d1d&chksm=8b541cf5bc2395e3fde848cb77cbdc6d1c105e800f5574c173e6b8b35d46db8b0a2556f8fb25&scene=21#wechat_redirect">Microsoft Office版本科普</a>》进行了详细的介绍，其中有一个版本为Office 365，现在改名为Microsoft 365，简而言之，它和按年度发布的Office版本（Office 2021、2019……）最直观的不同点在于，按年度发布的版本只进行安全升级，几乎无功能更新。而365的版本，会一直进行功能更新，可体验最新的功能。</p>
+<p>Microsoft 365的激活采用的是订阅制，不同的订阅计划，价格不同、功能服务也不同，此前我都进行了详细的介绍。最常见的是A1P、E5等。应网友要求，今天咱们就来介绍一下如何白嫖一个E5账户。</p>
+<p>E5是微软为开发人员准备的，<strong>免费试用90天</strong>，任何人都可以注册。但是微软会对你的账户进行检测，如果检测到有开发行为，则自动为你续期90天。反之，不再续期。所以很多人白嫖E5账户，就是首先注册一个免费账户。然后通过一些手段，让他<strong>自动进行续期</strong>，从而达到永久使用的目的。</p>
+<p>为了让所有人都能看懂，准备分为2篇文章进行详细的介绍。今天首先介绍如何注册E5账户、以及进行一些简单的设置。下一篇介绍如何续期。</p>
+<p><strong>一、免费注册E5账户</strong></p>
+<p>首先打开下面网址,使用微软账户进行账户登陆，没有的话注册一个。</p>
+<p><a href="https://developer.microsoft.com/office/profile">https://developer.microsoft.com/office/profile</a></p>
+<p><img src="https://gitee.com/geekker/blog-img/raw/master/img/640" alt="图片"></p>
+<p>登陆成功后，进行进行下面简单的注册：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGu75HwQibAib3RMryMDibsnORJSLcLbErAXWEI96K7KoSolZbcBVh2AN14g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>这里选择“供我公司内部使用的应用程序“，下一步。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGuzfuT0L5gwrn18BP7KkD166GBibRiaQd9WUs4rAJFia4UiaeY1Wd6p0Ae8Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>选择“可配置沙盒”，下一步。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGu1AicDb7vE05Hr2MYxMwibXDDDB4M8ptA1E9ETUWO4FmCibfPJqWaYU5iag/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>这里的“用户名”和“域“，随意编一个，设置好“密码”，继续。由于密码比较复杂，建议用记事本记录一下，后面会用到。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGuicPicliaf9YINVNzulrvxm2pLOatwy6f0hXaXbicUQT4pArVLBKX1xrjcQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>使用电话号码验证一下。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGuLWMGzibRd2HtdQcL6Yhn3UrBBKvSCDiciae3FQf8WF1GVzB974ibLnliceQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>至此一个E5的免费账户就注册完了，使用管理员账户和密码即可激活Microsoft 365，免费使用三个月。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGuZIScqGss0qm9oBLEriaceBWqMLtqbfib8ybmkce6ZlNibnQF2CQlw1dZg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>注册好的账户，默认只有1TB的空间，实际上最大赠送5TB。我们改一下设置即可。打开网址：</p>
+<p><a href="https://admin.onedrive.com/?v=StorageSettings">https://admin.onedrive.com/?v=StorageSettings</a></p>
+<p>点击“设置”，将下面的默认选项，设置为5120GB，点击“保存”。至此，刚刚获取的E5管理员账户就有5TB免费的空间了。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGu0dzSqxNiaFQMPwl3ds0f8ibgNMiaLkL4mcicSxjWwRA0PtPfMJflDjFGGQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>二、安装Mirosoft 365（可略过）</strong></p>
+<p>可以使用我之前推荐过的《<a href="http://mp.weixin.qq.com/s?__biz=MzA3Nzg3NjYxOQ==&mid=2448157160&idx=2&sn=900c45fa6cb5279bd152dcbc7ecf0888&chksm=8b54150cbc239c1a1388bca6910493c4d73479b8c8f017560763e0942a62a8d2511d5e825b14&scene=21#wechat_redirect">Office Tool Plus</a>》安装部署Office，也可以在微软官网下载一个下载器，在线部署安装。已经安装过365的小伙伴儿，可以跳过本节。</p>
+<p>进入网址：<a href="https://www.office.com,使用刚才注册的管理员账户和密码登录./">https://www.office.com，使用刚才注册的管理员账户和密码登录。</a></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGu8T6UDzXvuIukCrx1Wh00GSevibZggJibmC6xA95tsKhfPkZ9dpfkvufA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGuWRNe0vNvjn7sud0paJOFm591rqS5PuCFk1DYDNv5lfjn75PIFH21Eg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGuRtNz08VXdyibdkg5K3FI1LQ2XU0zd8keJEskll3bzyefPq7YILu2IkA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>如果你还没有安装Office，可以点击右上角，下载并安装Microsoft 365。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGu6ciaxNyAxyYpWUGJDfdjRJZySicu3nlfVqy5zyzHpkGc2JiavHUS8EQNg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>三、设置E5账户的子账户（可略过）</strong></p>
+<p>这一步不是必须要设置的，也可以跳过。但是一个E5账户的管理员账户，可以有25个子账户，免费的羊毛不薅白不薅？</p>
+<p>进入网址：<a href="https://www.office.com,使用刚才注册的管理员账户和密码登录.点击左侧的“管理”./">https://www.office.com，使用刚才注册的管理员账户和密码登录。点击左侧的“管理”。</a></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGujiaW0RrGEfPpFydkqTp2wbZbibDdiaW9TrzqsHO37DY2VyW3pgjba1GicA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>点击“新增用户”。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGuA9XJ0GGciaPLhnYbvC5FYDYbfm0GZwW5L8xQtT8nWibo3cAbz2aXBDVA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>随意设置一下子账户的基本信息。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGuAEKicj5D0Qe5hZta7q8mDWKULZChxr83TiaWnnQq9qWJ7ZbMU77rj1jA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>选择“向用户分配产品许可证”，下一步。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGulwVRVFjbYziaxeRz5Cxtyc3gvcJynCLu4eIyGicWB19hF2YQuALhNLGA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGuEwaW6bD2cdsyoQGak2QNELIjSeGdfynEqT1bDxnn14f3UBzUgEMulQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGuBHFZvNoeApyu5ib7uIRl1ETribDWiaCFibSpa5ibMbSclgIpQO0HULwQV9Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGukWicScKliajEcYPRvnhiae4kHjYGn5lKZg0SdxA05Ms1po3kQw5hVRj8g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>至此，子账户设置完成。同理，可设置25个子账户。算上管理员账户，总共26个账户，都是可以激活Microsoft 365的。</p>
+<p><strong>四、禁用安全默认值</strong></p>
+<p>这一步的目的是，为后面的续期做准备。禁用了该值，续期时才不会失败，务必注意。如果你只想用90天，这一步也不用看。参考下面的地址：</p>
+<p><a href="https://docs.microsoft.com/zh-cn/azure/active-directory/fundamentals/concept-fundamentals-security-defaults#disabling-security-defaults">https://docs.microsoft.com/zh-cn/azure/active-directory/fundamentals/concept-fundamentals-security-defaults#disabling-security-defaults</a></p>
+<p>点击Azure门户，来到下面的界面。找到“Azure Active Directory”，点击“查看”。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGuLhjcC2OfbonTkgdGDZ6MK5AFpEJLdPKRlash8t5HQqEy9kz5fgNibow/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>点击“属性”。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGuGKSuew4ZEHGibhibtJeiaicNWLfc3YktZNxygibdEdsysNnCF0qEcTice4ibg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>点击“管理安全默认值”。把右侧的开关置于“否”，然后点击“保存”。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGufW6ZwuKX5eriapdp8TiaVGu524BYRMHROtD2ljLesZ8e48pnpxlWyQZg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>在主页面再“保存”一下。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O51BoI5toLGQE6k0711icpfGuCP3FWr0qZEW4bJ3b6xzdic24Licjd7yefRxVLnvrR5hZhYZxNtgIibjtg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/pxopGibm8O50Libhvl48oYNl1GytXnTibylHiaS4ey8lUcSicsTzJiaPYppvqAkWPBia9y45rIAqRdNgbTlyzow5lRzTg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片">至此，准备工作完成。明天将介绍一下E5账户如何进行自动续期。方法非常多，有这方面经验的也可以分享。</p>
+]]></content>
+  </entry>
 </search>
